@@ -20,3 +20,7 @@ require "user.indentline"
 require "user.alpha"
 require "user.lsp"
 require "user.dap"
+require "user.which-key"
+require 'nvim-treesitter.install'.compilers = { "clang" }
+
+vim.wo.number = true -- same as vim.api.nvim_win_set_option(0, 'number', true)
