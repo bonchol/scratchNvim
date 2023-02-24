@@ -79,7 +79,8 @@ return packer.startup(function(use)
 	use ('norcalli/nvim-colorizer.lua') 
 	use ('norcalli/nvim-base16.lua')
   use {'shaunsingh/nord.nvim'}
-
+  use {'navarasu/onedark.nvim'}
+  use {'AlexvZyl/nordic.nvim'}
   -- cmp plugins
   use { "hrsh7th/nvim-cmp", commit = "b0dff0ec4f2748626aae13f011d1a47071fe9abc" } -- The completion plugin
   use { "hrsh7th/cmp-buffer", commit = "3022dbc9166796b644a841a02de8dd1cc1d311fa" } -- buffer completions
