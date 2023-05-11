@@ -1,7 +1,7 @@
 local status_ok, lualine = pcall(require, "lualine")
-if not status_ok then
+if not status_ok then  
   return
-end
+end 
 
 local hide_in_width = function()
   return vim.fn.winwidth(0) > 80
@@ -25,13 +25,13 @@ local diff = {
 
 local filetype = {
   "filetype",
-  icons_enabled = false,
+  icons_enabled = true,
 }
 
 local location = {
   "location",
   padding = 0,
-}
+} 
 
 local spaces = function()
   return "spaces: " .. vim.api.nvim_buf_get_option(0, "shiftwidth")
@@ -42,8 +42,8 @@ lualine.setup {
     globalstatus = true,
     icons_enabled = true,
     theme = "auto",
-    component_separators = { left = "", right = "" },
-    section_separators = { left = "", right = "" },
+    component_separators = { left = "", right = "" },
+    section_separators = { left = "", right = "" },
     disabled_filetypes = { "alpha", "dashboard" },
     always_divide_middle = true,
   },

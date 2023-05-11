@@ -29,7 +29,7 @@ if not status_ok then
   return
 end
 
--- Have packer use a popup window
+-- Have packer use a popup window 
 packer.init {
   display = {
     open_fn = function()
@@ -62,7 +62,10 @@ return packer.startup(function(use)
   use {'andweeb/presence.nvim'}
   use { '0x100101/lab.nvim', run = 'cd js && npm ci'}
   use {'wuelnerdotexe/vim-astro'}
-  
+  use {"ellisonleao/glow.nvim", config = function() require("glow").setup() end}
+  use {'Chaitanyabsprip/present.nvim',config = function()require('present').setup() end}
+  use {'stevearc/dressing.nvim'}
+
   -- Colorschemes
   use { "folke/tokyonight.nvim", commit = "66bfc2e8f754869c7b651f3f47a2ee56ae557764" }
   use { "lunarvim/darkplus.nvim", commit = "13ef9daad28d3cf6c5e793acfc16ddbf456e1c83" }
@@ -70,7 +73,6 @@ return packer.startup(function(use)
   use {"EdenEast/nightfox.nvim"}
   use {"mcchrish/zenbones.nvim",requires = "rktjmp/lush.nvim"} 
   use {"lunarvim/Onedarker.nvim"}
-  use ({ 'projekt0n/github-nvim-theme' })
   use 'Yazeed1s/minimal.nvim'
   use { 'Everblush/everblush.nvim', as = 'everblush' }
   use { 'rktjmp/lush.nvim' }
@@ -81,6 +83,8 @@ return packer.startup(function(use)
   use {'shaunsingh/nord.nvim'}
   use {'navarasu/onedark.nvim'}
   use {'AlexvZyl/nordic.nvim'}
+  use ({ 'projekt0n/github-nvim-theme', tag = 'v0.0.7' }) 
+
   -- cmp plugins
   use { "hrsh7th/nvim-cmp", commit = "b0dff0ec4f2748626aae13f011d1a47071fe9abc" } -- The completion plugin
   use { "hrsh7th/cmp-buffer", commit = "3022dbc9166796b644a841a02de8dd1cc1d311fa" } -- buffer completions
