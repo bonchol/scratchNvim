@@ -23,6 +23,7 @@ require "user.dap"
 require "user.which-key"
 require "user.presence"
 require "user.dressing"
+require "user.noice"
 require 'nvim-treesitter.install'.compilers = { "clang" }
 
 vim.wo.number = true -- same as vim.api.nvim_win_set_option(0, 'number', true)
