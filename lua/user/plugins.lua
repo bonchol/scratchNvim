@@ -27,7 +27,8 @@ vim.cmd [[
 local status_ok, packer = pcall(require, "packer")
 if not status_ok then
   return
-end
+end 
+
 
 -- Have packer use a popup window 
 packer.init {
@@ -40,7 +41,7 @@ packer.init {
     clone_timeout = 300, -- Timeout, in seconds, for git clones
   },
 }
-
+ 
 -- Install your plugins here
 return packer.startup(function(use)
   -- My plugins here
@@ -59,14 +60,12 @@ return packer.startup(function(use)
   use { "lewis6991/impatient.nvim", commit = "b842e16ecc1a700f62adb9802f8355b99b52a5a6" }
   use { "lukas-reineke/indent-blankline.nvim", commit = "db7cbcb40cc00fc5d6074d7569fb37197705e7f6" }
   use { "goolord/alpha-nvim", commit = "0bb6fc0646bcd1cdb4639737a1cee8d6e08bcc31" }
-  use {'andweeb/presence.nvim'}
   use { '0x100101/lab.nvim', run = 'cd js && npm ci'}
   use {'wuelnerdotexe/vim-astro'}
   use {"ellisonleao/glow.nvim", config = function() require("glow").setup() end}
-  use {'Chaitanyabsprip/present.nvim',config = function()require('present').setup() end}
-  use {'stevearc/dressing.nvim'}
-  use {'folke/noice.nvim'}
-  use {'MunifTanjim/nui.nvim'}
+  use {'Chaitanyabsprip/present.nvim',config = function()require('present').setup() end} -- presentation plugin for neovim
+  use {'neoclide/coc.nvim', branch = 'release'}
+
   -- Colorschemes
   use { "folke/tokyonight.nvim", commit = "66bfc2e8f754869c7b651f3f47a2ee56ae557764" }
   use { "lunarvim/darkplus.nvim", commit = "13ef9daad28d3cf6c5e793acfc16ddbf456e1c83" }
